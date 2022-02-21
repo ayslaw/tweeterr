@@ -4,10 +4,12 @@ nav {
   height: 120px;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
  }
  
  .logo {
- position: relative;
  font-size: 50px;
  top: 0.9em;
  right: 1.5em;
@@ -23,12 +25,11 @@ nav {
  font-size: 30px;
  margin-top: 0.01em;
  display: flex;
- justify-content: flex-end;
- position: relative;
+ align-items: center;
  right: 1.5em;
+ flex-direction: column;
  }
  
- .arrow {
-  display: flex;
-  justify-content: flex-end;
+ #arrow {
+  color: red;
  }
