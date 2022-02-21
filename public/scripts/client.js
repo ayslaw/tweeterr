@@ -20,7 +20,11 @@ $(document).ready(function () {
   };
   loadTweets();
   
- 
+ const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+ };
  
  const createTweetElement = function(tweet) {
   let date = timeago.format(tweet.created_at);
