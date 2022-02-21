@@ -6,12 +6,12 @@
  
  .tweet-header{
   height: 100%;
-    width: 100%;
-    position: relative;
-    display: grid;
-    /* background-color: #0074cc; */
-    background-image: url(https://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
-    margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  /* background-color: #0074cc; */
+  background-image: url(https://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
+  margin-bottom: 20px;
  }
  
  .tweet-header .left{

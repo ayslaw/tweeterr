@@ -35,6 +35,6 @@ nav {
  flex-direction: column;
  }
  
- #arrow {
+ .fa-angle-double-down {
   color: red;
  }
