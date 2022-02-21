@@ -27,6 +27,6 @@ body {
 
 .container {
   width: 90%;
-  margin: auto;
+  margin: auto 50px;
   background-color: #f4f1ec;
 }
