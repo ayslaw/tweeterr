@@ -1,16 +1,16 @@
 form {
   position: relative;
-  border-bottom: 3px solid black;
-  font-size: 1.2em;
-  margin-top: 1%;
- }
+    border-bottom: 3px solid black;
+    font-size: 1.2em;
+    margin-top: 1%;
+  }
  
- button{
-  background-color: blue;
-  color: white;
-  border: 2px solid black;
-  padding: 3px 10px;
-  left: 0;
+  button{
+   background-color: blue;
+   color: white;
+   border: 2px solid black;
+   padding: 3px 10px;
+   left: 0;
  }
  
  button, .counter{
@@ -31,4 +31,10 @@ form {
   resize: none;
   outline: none;
   margin-bottom: -10px;
+  border-bottom: 3px solid black;
  }
+ 
+ .counter.error {
+  color: red;
+ }
+ 
