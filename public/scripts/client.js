@@ -11,15 +11,13 @@ $(document).ready(function () {
       url: '/tweets',
       
     }).then((response) => {
-      // console.log("RESPONSE: ");
-      // console.log(response);
       renderTweets(response);
       $('#tweet-text').val("");
       $(".counter").text(140);
-    });
+    }); 
   };
-  loadTweets();
-  
+ loadTweets();
+ 
  const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -35,7 +33,7 @@ $(document).ready(function () {
               <h1 class="left">${tweet.user.name}</h1>
             <h5 class="right">${tweet.user.handle}</h5>
           </header>
-          <p class="message">${tweet.content.text}</p>
+          <p class="message">${escape(tweet.content.text)}</p>
           <footer class="tweet-footer">
             <div>
               <p class="left"> ${date}</p>
@@ -53,23 +51,17 @@ $(document).ready(function () {
  
  
  const renderTweets = function(tweets) {
-    $("#tweets").empty();
-    console.log($('.tweets-container'));
+    $(".tweets-container").empty();
     for (let tweet of tweets) {
       $('.tweets-container').prepend(createTweetElement(tweet));
     }
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container 
  }
- 
  
  
  const $newTweet = $('#tweet-form');
   $newTweet.on('submit', function(event) {
     event.preventDefault();
-    const tweet = $("#tweet-text").val().length;
-    console.log(tweet);
+    const tweet = $("#tweet-text").val().trim().length;
     if (!tweet) {
       $('#errorMessage').show();
       $('#errorMessage').text("Tweet cannot be empty!");
@@ -87,9 +79,7 @@ $(document).ready(function () {
           $('#errorMessage').hide();
           loadTweets();
           $("#tweet-text").val("");
-       
         });
     }
   })
- 
  });
